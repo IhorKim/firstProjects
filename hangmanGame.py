@@ -104,6 +104,6 @@ line()
 pos_letters()
 word = word()
 position_word(word)
-print(word)  # right answer
+print(word)  # show right answer
 
 win.mainloop()
