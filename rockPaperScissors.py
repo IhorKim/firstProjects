@@ -13,7 +13,7 @@ losses = 0
 ties = 0
 
 
-def play_rock():  # main logic of the game if you choose rock
+def play_rock():  # main (simple) logic of the game if you choose rock
     value = random.randint(1, 3)
     if value == 1:
         label_comp.config(text="Rock")
