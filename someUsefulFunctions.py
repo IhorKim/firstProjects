@@ -1,4 +1,4 @@
-# List of some interesting useful functions
+# List of some interesting, useful functions
 print('Bubble Sort Algorithm')
 list = [4, 5, 7, 9, 0, 3, 2, 1, 6, 8]
 def bubbleSort(seq):
