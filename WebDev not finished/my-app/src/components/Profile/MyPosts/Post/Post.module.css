@@ -1,0 +1,21 @@
+.main {
+  margin: 1em;
+}
+
+.item {
+  margin: 1em;
+  color: rgb(40, 12, 252);
+}
+
+.item img {
+  width: 5em;
+  height: 5em;
+  border-radius: 40px;
+}
+
+
+
+.span {
+ 
+  color: red;
+}

@@ -1,0 +1,32 @@
+.dialogs {
+    display: grid; 
+    grid-template-columns: 2fr 10fr;
+}
+
+.textfield {
+    border-top-right-radius: 5ex;
+    border-bottom-left-radius: 5ex;
+    resize: none;
+    
+}
+
+.item {
+    text-decoration: none;
+    margin: 0.5cm;
+}
+
+.dialog {
+    margin: 0.3cm;
+    
+}
+
+
+.active {
+    color: blue;
+  }
+
+
+.message {
+    margin: 0.3cm;
+}
+

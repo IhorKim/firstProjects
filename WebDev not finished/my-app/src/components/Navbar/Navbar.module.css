@@ -1,0 +1,16 @@
+.Nav {
+  margin-top: 1em;
+  grid-area: nav;
+  text-align: center;
+  width: 100px;
+  background-color: rgba(229, 229, 187, 0.693);
+  padding-top: 20px;
+}
+
+.item {
+  text-decoration: none;
+}
+
+.active {
+  color: blue;
+}
