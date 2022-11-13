@@ -1,6 +1,9 @@
-# List of some interesting, useful functions
+# List of some interesting useful functions
+print('-' * 70)
 print('Bubble Sort Algorithm')
 list = [4, 5, 7, 9, 0, 3, 2, 1, 6, 8]
+
+
 def bubbleSort(seq):
     n = len(seq)
     for i in range(n - 1):
@@ -10,9 +13,10 @@ def bubbleSort(seq):
                 seq[j] = seq[j + 1]
                 seq[j + 1] = value
     return seq
+
+
 print(bubbleSort(list))
 print('-' * 70)
-
 
 print('Sort elements in list')
 list = [4, 5, 7, 9, 0, 3, 2, 1, 6, 8]
@@ -21,7 +25,6 @@ print(list)
 list.sort(reverse=True)
 print(list)
 print('-' * 70)
-
 
 print('Sort elements in list')
 list = [4, 5, 7, 9, 0, 3, 2, 1, 6, 8]
@@ -36,15 +39,15 @@ while list:
 print(newList)
 print('-' * 70)
 
-
-print('Print prime numbers between 50 and 100')
+print('Print Prime Numbers between 50 and 100')
 for number in range(50, 100):
     if all(number % i != 0 for i in range(2, number)):
         print(number)
 print('-' * 70)
 
+print('Fibonacci Series')
 
-print('Fibonacci series')
+
 def Fib(n):
     if n == 0:
         return 0
@@ -52,43 +55,50 @@ def Fib(n):
         return 1
     else:
         return Fib(n - 1) + Fib(n - 2)
+
+
 for i in range(0, 20):
     print(Fib(i))
 print('-' * 70)
 
-
 print('Palindrome')
+
+
 def isPalindrome(s):
     rev = ''.join(reversed(s))
     if s == rev:
         return True
     return False
+
+
 print(isPalindrome('madam'))
 print('-' * 70)
-
 
 print('Duplicates in list')
 list = [4, 5, 3, 6, 8, 7, 9, 0, 3, 2, 1, 6, 8]
 print(set([i for i in list if list.count(i) > 1]))
 print('-' * 70)
 
-
 print('Reverse a list')
 list = [4, 5, 3, 6, 8, 7, 9, 0, 3, 2, 1, 6, 8]
+
+
 def rev(l):
     return l[::-1]
+
+
 print(rev(list))
 print('-' * 70)
 
-
 print('Extract digits from string')
-testString = 'ojnsdf7896s7fer3hbu'
-result = ''.join(filter(lambda i: i.isdigit(), testString))
+test_string = 'ojnsdf7896s7fer3hbu'
+result = ''.join(filter(lambda i: i.isdigit(), test_string))
 print(result)
 print('-' * 70)
 
-
 print('Delete reoccuring characters')
+
+
 def delete(s):
     seenCharacters = set()
     outputString = ''
@@ -97,9 +107,10 @@ def delete(s):
             seenCharacters.add(char)
             outputString += char
     return outputString
+
+
 print(delete('sssffgfhhkktbeddv'))
 print('-' * 70)
-
 
 print('FizzBuzz')
 counter = 0
@@ -118,7 +129,20 @@ for i in range(1, 51):
 print(counter)
 print('-' * 70)
 
+print('Program to read file')
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
+def read_settings(file_name):
+    if not os.path.exists(file_name):
+        return None
+    settings = dict()
+    with open(file_name, "r") as file:
+        for row in file:
+            key, value = row.split(" ")
+            settings[key] = value.strip()  # remove \n
+    return settings
 
-
+print(read_settings("settings.txt"))
+print('-' * 70)
